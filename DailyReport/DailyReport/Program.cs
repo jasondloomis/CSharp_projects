@@ -21,11 +21,11 @@ namespace DailyReport
             // Ask user for page number and store in variable
             Console.WriteLine("What page number are you on?");
             string pageNum = Console.ReadLine();
+            int intPageNum = Convert.ToInt32(pageNum);
 
             // Ask user if any help needed and store in variable
-            Console.WriteLine("Do you need help with anything? Please answere true or false");
+            Console.WriteLine("Do you need help with anything? Please answer true or false");
             bool boolHelp = true;
-            string strHelp = Convert.ToString(boolHelp);
 
             // Ask user about experience and store in variable
             Console.WriteLine("Were there any positive experiences you'd like to share? Please give specifics.");
@@ -38,6 +38,7 @@ namespace DailyReport
             // Ask user for hours worked and store in variable
             Console.WriteLine("How many hours did you study today?");
             string hours = Console.ReadLine();
+            int intHours = Convert.ToInt32(hours);
 
             // End program
             Console.WriteLine("Thank you for your answers. An instructor will respond to this shortly. Have a great day!");
