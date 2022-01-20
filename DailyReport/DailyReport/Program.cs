@@ -25,7 +25,8 @@ namespace DailyReport
 
             // Ask user if any help needed and store in variable
             Console.WriteLine("Do you need help with anything? Please answer true or false");
-            bool boolHelp = true;
+            string help = Console.ReadLine();
+            bool boolHelp = Convert.ToBoolean(help);
 
             // Ask user about experience and store in variable
             Console.WriteLine("Were there any positive experiences you'd like to share? Please give specifics.");
