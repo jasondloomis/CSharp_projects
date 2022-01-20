@@ -18,7 +18,7 @@ namespace ApplicationQualification
             Console.WriteLine("Have you ever had a speeding ticket? Please enter the number of how many.");
             string tickets = Console.ReadLine();
             // check all three conditions for true to be qualified
-            bool isQualified = (Convert.ToInt16(age) > 15 && Convert.ToBoolean(dui) == false && Convert.ToInt16(tickets) < 3);
+            bool isQualified = (Convert.ToInt16(age) > 15 && Convert.ToBoolean(dui) == false && Convert.ToInt16(tickets) <= 3);
             Console.WriteLine(isQualified);
         }
     }
