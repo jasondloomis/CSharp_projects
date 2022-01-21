@@ -41,7 +41,7 @@ namespace ShippingQuote
                 else
                 {
                     // calculate and display cost
-                    int result = ((intWeight * intHeight * intLength) / 100);
+                    int result = (((intWidth * intHeight * intLength) * intWeight)  / 100);
                     Console.WriteLine("Your estimated total for shipping this package is: $" + String.Format("{0:n}", result));
                     Console.WriteLine("Thank you!");
                 }
