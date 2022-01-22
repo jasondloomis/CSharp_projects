@@ -6,21 +6,29 @@ namespace ConsoleDoWhileBool
     {
         static void Main()
         {
-            // declare variables
-            int n = 10;
-            bool i = n == 1;
-            // check first condition, n
-            while (n>=1)
+            // ask user for number and declare variables           
+            Console.WriteLine("Pick a number between 1 and 100:");
+            int number = Convert.ToInt32(Console.ReadLine());
+            bool i = number == 99;
+
+
+            if (number < 1 || number > 100)
             {
-                // check second condiiton, i
+                Console.WriteLine("Number is not between 1 and 100.");
+            }
+            else if (number == 50)
+            {
+                while ()
+                {
+                }
+            }
+            else 
+            {
                 do
                 {
-                    // display n on console
-                    Console.WriteLine(n);
-                    // subtract 1 from variable
-                    n--;
-                }
-                while (i);
+                    Console.WriteLine("Your number is 50. The countdown has begun...RUN!");
+
+                    while ();
             }
             // complete conditions and display
             Console.WriteLine("Loops complete!");
