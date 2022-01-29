@@ -84,11 +84,11 @@ namespace ConsoleAssign
             {
                 Console.WriteLine("Name not found");
             }
-            
+
 
 
             // assignment 5
-
+            int index = 0;
             // create list of last names
             List<string> lastNames = new List<string>();
             lastNames.Add("carmen");
@@ -103,17 +103,22 @@ namespace ConsoleAssign
             string strLast = Console.ReadLine();
             // iterate thru last names
             foreach (string name in lastNames)
-            {   
+            {
                 if (name.Contains(strLast))
                 {
                     // display index of name
-                    Console.WriteLine(lastNames.IndexOf(strLast));
+                    Console.WriteLine(index);
                     
-                } 
+                }
+                index++;
+            }
+            if (!lastNames.Contains(strLast))
+            {
+                Console.WriteLine("Name not found.");
             }
 
             // assignment 6
-
+            int intDupl = 0;
             List<string> firstName = new List<string>();
             firstName.Add("carrie");
             firstName.Add("Kali");
@@ -132,10 +137,18 @@ namespace ConsoleAssign
             // iterate thru first name
             foreach (string name in firstName)
             {
-                if (duplicates.Contains(name)) 
+                if (duplicates.Contains(name) && intDupl == 0) 
                 {
-                
                     Console.WriteLine(name.Count() + " : " + name);
+                    intDupl++;
+                }
+                else if (duplicates.Contains(name) && intDupl > 0)
+                {
+                    Console.WriteLine();
+                }
+                else
+                {
+                    Console.WriteLine();
                 }
             }
 
