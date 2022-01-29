@@ -25,7 +25,7 @@ namespace ConsoleAssign
             // display array
             foreach (string word in strLibsArr)
             {
-                Console.WriteLine(word + " ");
+                Console.Write(word + " ");
             }
 
             // assignment 2
@@ -64,21 +64,28 @@ namespace ConsoleAssign
             // ask user for name to search in list
             Console.WriteLine("Enter a name to see if it exist in list:");
             string strInput = Console.ReadLine();
+            int notFound = 0;
             // iterate thru list to find name
             foreach (string name in strNames)
             {
-                    // check list against user input
-                    if (name == strInput)
-                    {
-                        Console.WriteLine(name.Contains(strInput));
-                        Console.WriteLine(strNames.IndexOf(strInput));
-                        break; // exit loop if found
-                    }
-                    else // if name not found display error
-                    {
-                        Console.WriteLine("Name is not in list.");
-                    }
+                // check list against user input
+                if (name.Contains(strInput))
+                {
+                    Console.WriteLine(strNames.IndexOf(strInput));
+                    notFound++;
+                    break;
+                }
+                //else
+                //{
+                //    notFound++;
+                //}
             }
+            if (notFound == 0)
+            {
+                Console.WriteLine("Name not found");
+            }
+            
+
 
             // assignment 5
 
@@ -97,17 +104,12 @@ namespace ConsoleAssign
             // iterate thru last names
             foreach (string name in lastNames)
             {   
-                if (name == strLast)
+                if (name.Contains(strLast))
                 {
                     // display index of name
                     Console.WriteLine(lastNames.IndexOf(strLast));
-                    continue;
+                    
                 } 
-                else
-                {
-                    // display error if name not found 
-                    Console.WriteLine("Last name not found.");
-                }
             }
 
             // assignment 6
