@@ -75,17 +75,11 @@ namespace ConsoleAssign
                     notFound++;
                     break;
                 }
-                //else
-                //{
-                //    notFound++;
-                //}
             }
             if (notFound == 0)
             {
                 Console.WriteLine("Name not found");
             }
-
-
 
             // assignment 5
             int index = 0;
@@ -139,16 +133,16 @@ namespace ConsoleAssign
             {
                 if (duplicates.Contains(name) && intDupl == 0) 
                 {
-                    Console.WriteLine(name.Count() + " : " + name);
+                    Console.WriteLine(name + " has not been see in the list.");
                     intDupl++;
                 }
                 else if (duplicates.Contains(name) && intDupl > 0)
                 {
-                    Console.WriteLine();
+                    Console.WriteLine(name + " has already been seen in the list.");
                 }
                 else
                 {
-                    Console.WriteLine();
+                    Console.WriteLine(name + " has not been seen in the list");
                 }
             }
 
