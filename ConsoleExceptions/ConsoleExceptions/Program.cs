@@ -6,6 +6,8 @@ namespace ConsoleExceptions
     {
         static void Main(string[] args)
         {
+            // start program and ask user for two number to divide
+            // declare variables for user input
             try
             {
                 Console.WriteLine("Pick a number:");
@@ -15,22 +17,21 @@ namespace ConsoleExceptions
                 Console.WriteLine("Dividing the number...");
                 int numThree = numOne / numTwo;
                 Console.WriteLine(numOne + " divided by " + numTwo + " equals " + numThree);
-                Console.ReadLine();
             }
-            catch (FormatException ex)
+            catch (FormatException ex) // exception for using string 
             {
                 Console.WriteLine("Please use a whole number:");
                 return;
             }
-            catch (DivideByZeroException ex)
+            catch (DivideByZeroException ex) // exception for using zero
             {
                 Console.WriteLine("Cannot divede by zero.");
             }
-            catch (Exception ex)
+            catch (Exception ex) // general exception
             {
                 Console.WriteLine(ex.Message);
             }
-            finally
+            finally // keep screen on after program runs
             {
                 Console.ReadLine();
             }
